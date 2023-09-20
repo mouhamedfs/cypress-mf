@@ -1,4 +1,4 @@
-name: Add Action
+name: e2ecypress-test
 on: [push, pull_request]
 jobs:
   cypress-run:
