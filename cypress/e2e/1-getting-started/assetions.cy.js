@@ -12,6 +12,7 @@ describe('Assertions', ()=> {
         cy.get('input[name=\"username\"]').should('be.visible')
         cy.get('input[name=\"username\"]').type('Admin')
         cy.get('input[name=\"username\"]').should('have.value','Admin')
+        cy.get('input[name=\"username\"]').should('not.contain','123')
     })
 
     it('explicit assertions', () =>{
@@ -19,6 +20,7 @@ describe('Assertions', ()=> {
         cy.get("[name=\"username\"]").type("Admin")
         cy.get("input[name=\"password\"]").type("admin123")
         cy.get("button[type=\"submit\"]").click()
+        cy.get("input[name=\"password\"]").should('be.visible')
 
 
 
