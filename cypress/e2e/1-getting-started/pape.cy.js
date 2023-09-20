@@ -24,6 +24,9 @@ describe("Dummy API", () => {
                 cy.get("#company").type("Agiltoo")
                 cy.get("#phone").type('071523335')
                 cy.get("#phone").type('65561561513312')
+                cy.get("#phone").then(()=>{
+                    expect(nom).to.be.equal(prenom)
+                })
             })
             cy.request({
                 method: 'GET',
