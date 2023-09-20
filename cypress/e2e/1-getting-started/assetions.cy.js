@@ -20,6 +20,7 @@ describe('Assertions', ()=> {
         cy.get("[name=\"username\"]").type("Admin")
         cy.get("input[name=\"password\"]").type("admin123")
         cy.get("button[type=\"submit\"]").click()
+        cy.get("input[name=\"password\"]").should('be.visible')
 
 
 
