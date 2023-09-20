@@ -23,6 +23,7 @@ describe("Dummy API", () => {
                 cy.get("#last-name").type(nom)
                 cy.get("#company").type("Agiltoo")
                 cy.get("#phone").type('071523335')
+                cy.get("#phone").type('65561561513312')
             })
             cy.request({
                 method: 'GET',
