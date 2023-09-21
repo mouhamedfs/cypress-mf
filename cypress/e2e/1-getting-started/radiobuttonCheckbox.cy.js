@@ -10,5 +10,11 @@ describe('check ui elements',()=> {
         //select radio button
         cy.get('input#male').check().and('be.checked')
         cy.get('input#female').check().and('not.be.checked')
+
+        //unselecting checkbox
+        cy.get('input#male').uncheck().should('be.visible')
+
+        //select the first element of multiple checkbox
+        cy.get('input.flex-input').first().check().should('be.checked')
     })
 })
