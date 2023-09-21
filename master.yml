@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        token: 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
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -22,7 +24,7 @@ jobs:
       run: npm install
 
     - name: Run Cypress tests
-      run: npm cypress run
+      run: npm run cypress:run
 
     - name: Upload Cypress artifacts
       uses: actions/upload-artifact@v2
