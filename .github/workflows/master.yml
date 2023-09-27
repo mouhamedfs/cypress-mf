@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         token: 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
 
@@ -39,6 +39,6 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v6
 
     # Add deployment steps here, like deploying to a hosting service or server
